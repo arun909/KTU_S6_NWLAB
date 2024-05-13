@@ -5,6 +5,7 @@
 #include<netdb.h>
 #include<stdlib.h>
 #include<string.h>
+
 #include<unistd.h>
 int main(int argc,char * argv[])
 {
@@ -16,7 +17,7 @@ int main(int argc,char * argv[])
   if(serv_sockfd<0)
     printf("error");
   serv_addr.sin_family=AF_INET;
-  serv_addr.sin_port=htons(portno);
+  serv_addr.sin_port=htons(portno);///
   serv_addr.sin_addr.s_addr=INADDR_ANY;
   bind(serv_sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr));
   listen(serv_sockfd,5);
