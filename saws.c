@@ -1,9 +1,12 @@
 //sawserver.c
 #include <stdio.h>
 #include <stdlib.h>
+
 #include <string.h>
+
 #include <unistd.h>
 #include <arpa/inet.h>
+
 
 int main() {
     int sockfd = socket(AF_INET, SOCK_DGRAM, 0); // Creating socket file descriptor
