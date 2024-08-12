@@ -25,6 +25,9 @@ int main(int argc,char * argv[])
     printf("enter the second number:");
     scanf("%d",&j);
    sen2= sendto(sockfd,&j,sizeof(j),MSG_CONFIRM,(struct sockaddr *) &serv_addr,sizeof(serv_addr));
+
+
+
    if(sen2<0)
     printf("error");
    rec1=recvfrom(sockfd,&k,sizeof(k),MSG_WAITALL,(struct sockaddr *) &serv_addr,&len);
